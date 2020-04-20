@@ -18,9 +18,7 @@ export default {
   },
   computed: {
     blogs() {
-      return this.$store.state.blogs.sort(
-        (a, b) => a.make.charCodeAt(0) - b.make.charCodeAt(0)
-      );
+      return this.$store.state.blogs
     }
   },
   created() {

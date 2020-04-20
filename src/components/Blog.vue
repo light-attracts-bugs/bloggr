@@ -1,7 +1,7 @@
 <template>
   <div class="blog border col-3" @click="selectBlog()">
-    <p>{{blogData.make}}</p>
-    <p>{{blogData.model}}</p>
+    <p>{{blogData.title}}</p>
+    <p>{{blogData.body}}</p>
   </div>
 </template>
 

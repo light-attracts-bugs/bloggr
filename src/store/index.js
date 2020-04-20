@@ -23,16 +23,16 @@ export default new Vuex.Store({
   actions: {
     async getBlogs({ commit, dispatch }) {
       try {
-        let res = await api.get('blog')
+        let res = await api.get('blogs')
         console.log(res.data.data)
-        commit('setBlog', res.data.data)
+        commit('setBlogs', res.data.data)
       } catch (error) {
         console.error(error)
       }
     },
     async createBlog({ commit, dispatch }, newBlog) {
       try {
-        let res = await api.post('blog', newBlog)
+        let res = await api.post('blogs', newBlog)
         dispatch('getBlogs')
       } catch (error) {
         console.error(error)
